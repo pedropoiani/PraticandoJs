@@ -116,6 +116,7 @@ body {
 .result_div {
   max-width: 100%;
   width: 1400px;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -131,4 +132,19 @@ body {
   color: #fff;
 
   margin-left: 12px;
+
+}
+
+@font-face {
+
+  font-family: h2_font;
+  src: url(assets/fonts/h2_font.ttf);
+
+}
+
+h2#title_escolha {
+
+  font-family: h2_font;
+  font-size: 30px;
+
 }

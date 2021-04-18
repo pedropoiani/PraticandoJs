@@ -23,6 +23,7 @@
 
   <div class="container">
     <div class="introduction">
+      <h2 id="title_escolha"></h2>
       <img src="./assets/images/cartelas.png" alt="" class="small">
       <img src="./assets/images/duvida.png" alt="" class="big">
 
@@ -82,6 +83,7 @@
 
 
 
+
     </div>
   </div>
   <footer>
@@ -89,7 +91,7 @@
   </footer>
   <script>
 
-
+    var title_escolha = document.getElementById("title_escolha")
     var select_val
 
     function escolha() {
@@ -98,7 +100,30 @@
       return opcao.addEventListener('change', (e) => {
 
         select_val = e.target.value
-        console.log(select_val)
+
+        h2_tilte = select_val
+
+        if (h2_tilte === "megasena") {
+
+          title_escolha.innerHTML = "MEGA-SENA"
+
+        } else if (h2_tilte === "lotofacil") {
+
+          title_escolha.innerHTML = "LOTOFÁCIL"
+
+        } else if (h2_tilte === "quina") {
+
+          title_escolha.innerHTML = "QUINA"
+
+        } else if (h2_tilte === "lotomania") {
+
+          title_escolha.innerHTML = "LOTOMANIA"
+
+        } else if (h2_tilte === "timemania") {
+
+          title_escolha.innerHTML = "TIMEMANIA"
+
+        }
 
       })
 
@@ -116,6 +141,8 @@
       var num_sorte = document.getElementById('num_sorte')
       var title = document.createElement('h3')
       if (select_val === 'megasena') {
+
+
 
         for (; i < 6; i++) {
           num = Math.floor((Math.random() * 60) + 1);
@@ -143,6 +170,29 @@
 
         for (; i < 5; i++) {
           num = Math.floor((Math.random() * 80) + 1);
+          if (num < 10) {
+            num = '0' + num
+          }
+          result.push(num)
+          frase = result
+
+        }
+
+      } else if (select_val === 'timemania') {
+
+        for (; i < 10; i++) {
+          num = Math.floor((Math.random() * 80) + 1);
+          if (num < 10) {
+            num = '0' + num
+          }
+          result.push(num)
+          frase = result
+
+        }
+      } else if (select_val === 'lotomania') {
+
+        for (; i < 50; i++) {
+          num = Math.floor((Math.random() * 99) + 1);
           if (num < 10) {
             num = '0' + num
           }
