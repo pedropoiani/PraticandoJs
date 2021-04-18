@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;500&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
   <title>Praticando 005</title>
 </head>
 
 <body>
-  
+
 
   <header class="header">
     <img src="./assets/images/logo.png" alt="">
@@ -25,15 +25,15 @@
     <div class="introduction">
       <img src="./assets/images/cartelas.png" alt="" class="small">
       <img src="./assets/images/duvida.png" alt="" class="big">
-      
+
       <div class="text">
         <h2>EM DÚVIDA COM OS NÚMEROS?</h2>
-        <p>Para você que está em dúvida de qual número escolher, 
+        <p>Para você que está em dúvida de qual número escolher,
           apresentamos abaixo uma ferramenta que irá facilitar a sua vida.
-        Escolha entre diversas modalidades de jogos e teste a sua sorte.
-        Não podemos garantir que você irá ganhar, mas sonhar está liberado &#128513; .</p>
+          Escolha entre diversas modalidades de jogos e teste a sua sorte.
+          Não podemos garantir que você irá ganhar, mas sonhar está liberado &#128513; .</p>
       </div>
-    
+
     </div>
     <div class="types-of-games">
       <h2>Escolha entre as seguintes modalidades de jogos!</h2>
@@ -47,17 +47,17 @@
           <img src="./assets/images/loto_facil.png" alt="" class="img-game">
           <p>Loto Facil</p>
         </div>
-        
+
         <div class="game-type">
           <img src="./assets/images/loto_mania.png" alt="" class="img-game">
           <p>Loto Mania</p>
         </div>
-       
+
         <div class="game-type">
           <img src="./assets/images/quina.png" alt="" class="img-game">
           <p>Quina</p>
         </div>
-        
+
       </div>
     </div>
     <div class="game">
@@ -70,22 +70,22 @@
           <option value='lotomania'>LotoMania</option>
           <option value='quina'>Quina</option>
           <option value='timemania'>TimeMania</option>
-      
+
         </select>
-      
+
         <button type="button" onclick="gerar()">Gerar</button>
       </div>
-      
-      <div class ="result_div"id="final_result">
+
+      <div class="result_div" id="final_result">
         <h3 id="num_sorte"> </h3>
       </div>
-    
-    
-    
+
+
+
     </div>
   </div>
   <footer>
-    
+
   </footer>
   <script>
 
@@ -112,15 +112,15 @@
       var i = 0
       var frase
       var num
-      var result_div  = document.getElementById("final_result")
+      var result_div = document.getElementById("final_result")
       var num_sorte = document.getElementById('num_sorte')
-      var title= document.createElement('h3')
+      var title = document.createElement('h3')
       if (select_val === 'megasena') {
 
         for (; i < 6; i++) {
           num = Math.floor((Math.random() * 60) + 1);
-          if(num < 10){
-            num = '0'+num
+          if (num < 10) {
+            num = '0' + num
           }
           result.push(num)
           frase = result
@@ -131,24 +131,36 @@
 
         for (; i < 20; i++) {
           num = Math.floor((Math.random() * 25) + 1);
-               if(num < 10){
-            num = '0'+num
+          if (num < 10) {
+            num = '0' + num
           }
           result.push(num)
           frase = result
 
         }
 
-      } 
-  
+      } else if (select_val === 'quina') {
+
+        for (; i < 5; i++) {
+          num = Math.floor((Math.random() * 80) + 1);
+          if (num < 10) {
+            num = '0' + num
+          }
+          result.push(num)
+          frase = result
+
+        }
+      }
+
+
       result_div.innerHTML = ''
-      for(let i=0; i<result.length;i++){
+      for (let i = 0; i < result.length; i++) {
         var number = document.createElement('label')
         number.innerHTML = result[i]
-        
+
         result_div.append(number)
       }
-     
+
 
     }
 
