@@ -1,20 +1,134 @@
-
-
-
-
-body{
-  background-color: black;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background: #e9e6de;
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  background-color: #049c4c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  color: #ffd700;
+  font-family: "Antonio", sans-serif;
+}
+.header img {
+  width: 60px;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.small {
+  width: 350px;
+}
+.big {
+  width: 200px;
+}
+.container .introduction {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 2px solid green;
+  background: #ceccb4;
+  color: #32331d;
+}
+.container .introduction .text {
+  margin-left: 100px;
+  width: 400px;
+  font-size: 20px;
+}
+.container .introduction h2 {
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.container .types-of-games {
+  display: flex;
+  flex-direction: column;
+  color: #37382a;
+  margin-top: 10px;
+}
+.container .types-of-games .types {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.container .types-of-games .types .game-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.container .types-of-games .types .game-type img {
+  width: 65px;
+  padding: 5px;
 }
 
-#rodape{
-  background:yellow;
-  color: black;;
-  width: 100%;
-  text-align: center;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  }
-  
+.game {
+  max-width: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.game .choose-game select {
+  width: 60%;
+  padding: 6px;
+  border: none;
+  outline: none;
+  background: rgb(213, 235, 15);
+  color: rgb(34, 33, 33);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.game .choose-game button {
+  margin-left: 10px;
+  width: 35%;
+  padding: 6px;
+  border: none;
+  background: #049c4c;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+.result_div {
+  max-width: 100%;
+  width: 1400px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 10px;
+}
+.result_div label {
+  font-size: 20px;
+  width: 35px;
+  padding: 7px 7px;
+  border-radius: 50%;
+  background: rgb(36, 35, 35);
+  color: #fff;
+
+  margin-left: 12px;
+}
