@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html
+>
 <html lang="pt-br">
 
 <head>
@@ -12,8 +13,39 @@
 
   <h1>Controle de Velocidade</h1>
 
-  Velocidade do Carro <input type="number" name="" id="velocidade_atual"> km/h
+  Velocidade do Carro <input type="number" id="velocidade_atual"> km/h
   <input type="button" onclick="verificar()" value="Verificar">
+  <h2 id='mostra_aqui'></h2>
+
+  <audio id="audio" src="sound_fail.mp3"></audio>
+
+
+  <script>
+
+
+    function verificar() {
+
+      var audio = document.getElementById('audio')
+      var camp1 = window.document.getElementById('velocidade_atual')
+      var vel_a = Number(camp1.value)
+      console.log(vel_a)
+
+      if (vel_a > 70) {
+
+        mostra_aqui.innerHTML = 'Você foi multado otário'
+        audio.play()
+
+
+      } else {
+
+        mostra_aqui.innerHTML = 'Você Não foi multado.'
+
+      }
+
+
+    }
+
+  </script>
 
 </body>
 
