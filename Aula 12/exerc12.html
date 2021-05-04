@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia, tarde, noite ou Madrigada? </title>
+</head>
+
+<body id='id_body'>
+  <br>
+  <h2 id='h2' style="text-align: center;">Pela hora do seu computador saberemos se é Dia, tarde, noite ou Madrigada</h2>
+  <div style="text-align: center;">
+    <button style="font-size: 20px;" onclick="resultado()">Clique e Veja!</button>
+    <h3 id='rest'></h3>
+  </div>
+
+
+  <script>
+
+    let fundo = window.document.getElementById('id_body');
+    let h2 = window.document.getElementById('h2')
+    let rest = window.document.getElementById('rest')
+
+
+    function manha() {
+
+      rest.innerHTML = 'Manhã'
+      fundo.style.backgroundSize = ' cover'
+      fundo.style.backgroundImage = "url('manha.jpg')";
+
+
+    }
+
+
+    function tarde() {
+
+
+      rest.innerHTML = 'Tarde'
+      fundo.style.backgroundSize = 'cover'
+      fundo.style.backgroundImage = "url('tarde.jpg')"
+
+
+    }
+
+    function noite() {
+
+      rest.innerHTML = 'Noite'
+      rest.style.color = 'white'
+      h2.style.color = 'white'
+      fundo.style.backgroundSize = 'cover'
+      fundo.style.backgroundImage = "url('noite.jpg')";
+
+    }
+
+    function madrugada() {
+
+      rest.innerHTML = 'Madrugada'
+      rest.style.color = 'white'
+      h2.style.color = 'white'
+      fundo.style.backgroundSize = 'cover'
+      fundo.style.backgroundImage = "url('madrugada.jpg')";
+
+
+    }
+
+    function resultado() {
+
+      var hora = 1
+      // let data = new Date();
+      //let hora = data.getHours()
+
+
+      if (hora >= 5 && hora < 12) {
+
+        manha();
+
+      } else if (hora >= 12 && hora < 18) {
+
+        tarde();
+
+      } else if (hora >= 18 && hora <= 23) {
+
+        noite();
+
+      } else {
+
+        madrugada();
+
+      }
+    }
+
+  </script>
+</body>
+
+</html>
